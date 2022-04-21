@@ -4,11 +4,11 @@
 
 このプロジェクトは、Core Data のスタックをアプリケーションにカプセル化し、永続的なストアを CloudKit のプライベートデータベースにミラーリングしてくれる `NSPersistentCloudKitContainer` で Core Data を使うサンプルです。ローカルで行われた変更は自動的にリモートの CloudKit データベースに送られ、リモートの変更はバックグラウンドのプッシュ通知によってデバイス間でフェッチされローカルストアに取り込まれます。
 
-### Prerequisites
+### 環境
 
-* A Mac with [Xcode 12](https://developer.apple.com/xcode/) (or later) installed is required to build and test this project.
-* An iOS device which will receive CloudKit change notifications is required to install and run the app on, as simulators cannot receive remote push notifications.
-* An active [Apple Developer Program membership](https://developer.apple.com/support/compare-memberships/) is needed to create a CloudKit container and sign the app to run on a device.
+* このプロジェクトのビルドとテストを実行するには、[Xcode 12](https://developer.apple.com/xcode/) 以降のインストールされた Mac が必要です。
+* iOS Simulator ではリモートからのプッシュ通知を受信できないため、アプリをインストールし実行するには、CloudKit のプッシュ通知（変更通知）を受信できるiOSデバイスが必要です。
+* CloudKit コンテナを作成し、アプリを署名してデバイス上で実行するには、アクティブな [Apple Developer Program メンバーシップ](https://developer.apple.com/support/compare-memberships/)が必要です。
 
 ### Setup Instructions
 
