@@ -1,3 +1,5 @@
+_This document was translated by [@treastrain](https://github.com/treastrain) with the help of DeepL and Google Translate._
+
 # CloudKit サンプル: CloudKit で Core Data を使う
 
 ### 概要
@@ -7,13 +9,13 @@
 ### 環境
 
 * このプロジェクトのビルドとテストを実行するには、[Xcode 12](https://developer.apple.com/xcode/) 以降のインストールされた Mac が必要です。
-* iOS Simulator ではリモートからのプッシュ通知を受信できないため、アプリをインストールし実行するには、CloudKit のプッシュ通知（変更通知）を受信できるiOSデバイスが必要です。
+* iOS Simulator ではリモートからのプッシュ通知を受信できないため、アプリをインストールし実行するには、CloudKit のプッシュ通知（変更通知）を受信できる iOS デバイスが必要です。
 * CloudKit コンテナを作成し、アプリを署名してデバイス上で実行するには、アクティブな [Apple Developer Program メンバーシップ](https://developer.apple.com/support/compare-memberships/)が必要です。
 
 ### セットアップ手順
 
 1. Apple Developer Program メンバーシップがアクティブになっている Apple ID が Xcode に追加されている状態にします。
-1. `CoreDataSync` ターゲットの「Signing & Capabilities」タブにある "Signing" セクションでチームが選択されていることと、「iCloud」セクションで有効なコンテナが選択されていることを確認します。
+1. `CoreDataSync` ターゲットの「Signing & Capabilities」タブにある「Signing」セクションでチームが選択されていることと、「iCloud」セクションで有効なコンテナが選択されていることを確認します。
 1. 使用する iOS Simulator とアプリを実行する実機デバイスの両方が、同じ iCloud アカウントにログインしていることを確認します。
 
 #### 自分の iCloud コンテナを使用する
