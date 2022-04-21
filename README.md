@@ -37,13 +37,13 @@
 
 iOS Simulator ではリモートからのプッシュ通知がサポートされていないため、実行中の実機デバイス側での変更は、逆に実行中の iOS Simulator 側に自動的に反映されないことに注意してください。iOS Simulator 上でアプリを再度実行することで、Core Data と CloudKit は実機デバイス側で行われた変更を同期するようになります。
 
-### Things To Learn
+### このプロジェクトでわかること
 
-* Showing a live list of Core Data managed objects with SwiftUI using the `@FetchRequest` property wrapper.
-* Adding and deleting objects with `NSManagedObjectContext`.
-* Automatic syncing of Core Data objects with `NSPersistentCloudKitContainer`.
-* `NSPersistentCloudKitContainer` processing of push notifications to receive and display updates initiated on another device.
-* Storage and decoding of image types in Core Data and CloudKit Private Database.
+* `@FetchRequest` を使用した SwiftUI での Core Data 管理対象オブジェクトのリストの表示。
+* `NSManagedObjectContext` を使用したオブジェクトの追加と削除。
+* `NSPersistentCloudKitContainer` を使用した Core Data オブジェクトの自動同期。
+* `NSPersistentCloudKitContainer` が行う、別なデバイスからの更新をプッシュ通知経由で受けたときの表示の更新。
+* Core Data および CloudKit プライベートデータベースでの `UIImage` の保存とデコード。
 
 ### Further Reading
 
