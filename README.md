@@ -45,7 +45,7 @@ iOS Simulator ではリモートからのプッシュ通知がサポートされ
 * `NSPersistentCloudKitContainer` が行う、別なデバイスからの更新をプッシュ通知経由で受けたときの表示の更新。
 * Core Data および CloudKit プライベートデータベースでの `UIImage` の保存とデコード。
 
-### Further Reading
+### 参考
 
 * [NSPersistentCloudKitContainer](https://developer.apple.com/documentation/coredata/nspersistentcloudkitcontainer)
 * [Mirroring a Core Data Store with CloudKit](https://developer.apple.com/documentation/coredata/mirroring_a_core_data_store_with_cloudkit)
