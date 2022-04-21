@@ -1,8 +1,8 @@
-# CloudKit Samples: Core Data with CloudKit
+# CloudKit サンプル: CloudKit で Core Data を使う
 
-### Goals
+### 概要
 
-This project demonstrates using Core Data with `NSPersistentCloudKitContainer`, which encapsulates the Core Data stack in an application and mirrors persistent stores to a CloudKit private database. Changes made locally are automatically sent to the remote CloudKit database, and remote changes are fetched and brought into local stores across devices through background push notifications.
+このプロジェクトは、Core Data のスタックをアプリケーションにカプセル化し、永続的なストアを CloudKit のプライベートデータベースにミラーリングしてくれる `NSPersistentCloudKitContainer` で Core Data を使うサンプルです。ローカルで行われた変更は自動的にリモートの CloudKit データベースに送られ、リモートの変更はバックグラウンドのプッシュ通知によってデバイス間でフェッチされローカルストアに取り込まれます。
 
 ### Prerequisites
 
