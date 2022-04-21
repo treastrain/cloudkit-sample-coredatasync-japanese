@@ -26,16 +26,16 @@
 * `CoreDataSync` モデルでは、名前（`String`）と写真（`UIImage` Transformable）を格納する `Contact` エンティティを定義しています。
 * `PersistenceController` クラスは、`NSPersistentCloudKitContainer` オブジェクトを `CoreDataSync` モデルとともに生成します。
 * 一覧画面（`ContentView`）では、[`@FetchRequest`](https://developer.apple.com/documentation/swiftui/fetchrequest) を使用して Core Data ストアから `Contact` オブジェクトを取得します。
-* 新しい `Contacts` の作成と既存の `Contacts` の削除は、通常の Core Data の操作を介して行われます。
+* 新しい `Contact` の作成と既存の `Contact` の削除は、通常の Core Data の操作を介して行われます。
 * `NSPersistentCloudKitContainer` は、アプリの Entitlements ファイルにリストされている iCloud コンテナ内のユーザーのプライベートデータベースと同期します。
 
-### Example Flow
+### フローの例
 
-1. Run the app on a device. After initializing the store, CoreData+CloudKit mirroring will fetch any existing records from the remote private database.
-1. Repeat the above on a simulator, and add a new contact through the UI.
-1. The device receives a background push notification which is automatically processed by CoreData+CloudKit. Changes are fetched and merged into the local store, and both simulator and device once again show the same content. Deleting a contact by swiping left on a cell produces similar behavior.
+1. 実機デバイスでアプリを実行します。ストアを初期化した後、Core Data と CloudKit のミラーリングによって、リモートにあるプライベートデータベースから既存のレコードをフェッチされます。
+1. iOS Simulator 側のアプリで UI から新しい `Contact` を追加します。
+1. 実機デバイス側ではバックグラウンドでプッシュ通知を受信し、Core Data と CloudKit によって自動的に処理されます。変更はローカルストアにフェッチされマージされ、iOS Simulator 側と実機デバイス側の両方で同じコンテンツが再び表示されます。セルを左にスワイプして `Contact` を削除しても、同様の動作が行われます。
 
-Note that because remote push notifications are not supported on simulators, changes on a running device will not be automatically reflected on a running simulator as they are the other way around. Running the app again on a simulator will cause CoreData+CloudKit to sync changes made on a device.
+iOS Simulator ではリモートからのプッシュ通知がサポートされていないため、実行中の実機デバイス側での変更は、逆に実行中の iOS Simulator 側に自動的に反映されないことに注意してください。iOS Simulator 上でアプリを再度実行することで、Core Data と CloudKit は実機デバイス側で行われた変更を同期するようになります。
 
 ### Things To Learn
 
