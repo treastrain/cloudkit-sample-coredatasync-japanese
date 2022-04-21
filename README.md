@@ -10,16 +10,16 @@
 * iOS Simulator ではリモートからのプッシュ通知を受信できないため、アプリをインストールし実行するには、CloudKit のプッシュ通知（変更通知）を受信できるiOSデバイスが必要です。
 * CloudKit コンテナを作成し、アプリを署名してデバイス上で実行するには、アクティブな [Apple Developer Program メンバーシップ](https://developer.apple.com/support/compare-memberships/)が必要です。
 
-### Setup Instructions
+### セットアップ手順
 
-1. Ensure you are logged into your developer account in Xcode with an active membership.
-1. In the “Signing & Capabilities” tab of the CoreDataSync target, ensure your team is selected in the Signing section, and there is a valid container selected under the “iCloud” section.
-1. Ensure that both the simulator you wish to use and the device you will run the app on are logged into the same iCloud account.
+1. Apple Developer Program メンバーシップがアクティブになっている Apple ID が Xcode に追加されている状態にします。
+1. `CoreDataSync` ターゲットの「Signing & Capabilities」タブにある "Signing" セクションでチームが選択されていることと、「iCloud」セクションで有効なコンテナが選択されていることを確認します。
+1. 使用する iOS Simulator とアプリを実行する実機デバイスの両方が、同じ iCloud アカウントにログインしていることを確認します。
 
-#### Using Your Own iCloud Container
+#### 自分の iCloud コンテナを使用する
 
-* Create a new iCloud container through Xcode’s “Signing & Capabilities” tab of the CoreDataSync app target.
-* Update the `containerIdentifier` property in [Config.swift](CoreDataSync/App/Config.swift) with your new iCloud container ID.
+* Xcode の `CoreDataSync` アプリターゲットの「Signing & Capabilities」タブから、新しい iCloud コンテナを作成します。
+* [Config.swift](CoreDataSync/App/Config.swift) にある `containerIdentifier` プロパティの値を、作成した新しい iCloud コンテナ ID に変更します。
 
 ### How it Works
 
