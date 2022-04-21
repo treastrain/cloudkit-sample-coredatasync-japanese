@@ -21,13 +21,13 @@
 * Xcode の `CoreDataSync` アプリターゲットの「Signing & Capabilities」タブから、新しい iCloud コンテナを作成します。
 * [Config.swift](CoreDataSync/App/Config.swift) にある `containerIdentifier` プロパティの値を、作成した新しい iCloud コンテナ ID に変更します。
 
-### How it Works
+### 動作の解説
 
-* The `CoreDataSync` model defines a `Contact` entity, which stores a name (`String`) and photo (`UIImage` Transformable).
-* The `PersistenceController` class creates an `NSPersistentCloudKitContainer` object with the `CoreDataSync` model.
-* The main list view uses the [`@FetchRequest`](https://developer.apple.com/documentation/swiftui/fetchrequest) property wrapper to retrieve Contact objects from the Core Data store.
-* Creating new Contacts and deleting existing Contacts is done through normal Core Data operations.
-* `NSPersistentCloudKitContainer` syncs with the user’s private database in the iCloud container listed in the app’s entitlements file.
+* `CoreDataSync` モデルでは、名前（`String`）と写真（`UIImage` Transformable）を格納する `Contact` エンティティを定義しています。
+* `PersistenceController` クラスは、`NSPersistentCloudKitContainer` オブジェクトを `CoreDataSync` モデルとともに生成します。
+* 一覧画面（`ContentView`）では、[`@FetchRequest`](https://developer.apple.com/documentation/swiftui/fetchrequest) を使用して Core Data ストアから `Contact` オブジェクトを取得します。
+* 新しい `Contacts` の作成と既存の `Contacts` の削除は、通常の Core Data の操作を介して行われます。
+* `NSPersistentCloudKitContainer` は、アプリの Entitlements ファイルにリストされている iCloud コンテナ内のユーザーのプライベートデータベースと同期します。
 
 ### Example Flow
 
